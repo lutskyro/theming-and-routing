@@ -1,8 +1,10 @@
+// components/Honeycomb.tsx
+
 import React, { useMemo } from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
-interface HoneycombGridProps {
+interface HoneycombProps {
   hexSize?: number;
   color?: string;
   strokeColor?: string;
@@ -10,11 +12,11 @@ interface HoneycombGridProps {
   style?: object;
 }
 
-const HoneycombGrid: React.FC<HoneycombGridProps> = ({
-  hexSize = 30,
+const Honeycomb: React.FC<HoneycombProps> = ({
+  hexSize = 16,
   color = 'transparent',
-  strokeColor = '#000000',
-  strokeWidth = 1,
+  strokeColor = '#282828',
+  strokeWidth = 0.05,
   style = {},
 }) => {
   const { width, height } = Dimensions.get('window');
@@ -73,4 +75,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HoneycombGrid;
+export default Honeycomb;

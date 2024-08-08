@@ -1,13 +1,17 @@
 import { Link } from "expo-router";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
-import HoneycombGrid from "../../../components/HoneycombGrid";
+import Honeycomb from "../../../components/Honeycomb";
+import { useHoneycombBackground } from "../../../hooks/useHoneycombBackground";
 
 export default function HomeScreen() {
+  const honeycombBackground = useHoneycombBackground();
+
   return (
-      <View style={styles.container}>
-        <Text>Home</Text>
-        <Link href="/details">View details</Link>
-      </View>
+    <View style={styles.container}>
+      {honeycombBackground}
+      <Text>Home Screen Content</Text>
+      <Link href="/(tabs)/(home)/details">Details</Link>
+    </View>
   );
 }
 

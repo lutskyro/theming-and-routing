@@ -1,10 +1,10 @@
 import { Stack } from 'expo-router';
-import HoneycombGrid from '../components/HoneycombGrid';
+import Honeycomb from '../components/Honeycomb';
 
 const RootLayout = () => {
   return (
     <>
-      <HoneycombGrid />
+      <Honeycomb />
       <Stack>
         <Stack.Screen
           name="(tabs)"
