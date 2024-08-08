@@ -1,20 +1,12 @@
-import { Slot, Tabs } from 'expo-router';
-import HoneycombGrid from '../../components/HoneycombGrid';
-import { View, StyleSheet } from 'react-native';
+import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
-  return (
-    <Tabs
-      screenOptions={{
-        headerShown: false,
-        tabBarIconStyle: {
-          display: 'none',
-        },
-    }}>
-
-      <Tabs.Screen name="(home)" />
-      <Tabs.Screen name="settings" />
-
-    </Tabs>
-  );
+  return <Tabs
+    screenOptions={{
+      headerShown: false,
+      tabBarIconStyle: {
+        display: 'none',
+      },
+    }}
+  />
 }

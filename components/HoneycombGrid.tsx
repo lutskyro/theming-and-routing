@@ -1,5 +1,3 @@
-// components/HoneycombGrid.tsx
-
 import React, { useMemo } from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
@@ -20,6 +18,7 @@ const HoneycombGrid: React.FC<HoneycombGridProps> = ({
   style = {},
 }) => {
   const { width, height } = Dimensions.get('window');
+  console.log('HoneycombGrid mounted', { width, height });
 
   const hexagons = useMemo(() => {
     const hexHeight = hexSize * 2;
